@@ -17,4 +17,8 @@
     const ListResult = defineModel('ListResult')
     console.log(Listnumber);
     console.log(ListResult);
+
+    function processInput() {
+        
+    }
 </script>

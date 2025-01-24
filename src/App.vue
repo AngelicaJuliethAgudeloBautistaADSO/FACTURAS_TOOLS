@@ -1,6 +1,14 @@
+<template>
+
+<navbar @click_eliminar="callback" @click_añador="callback" @click_comparar="callback"  />
+<Eliminar></Eliminar>
+
+</template>
+
+
 <script setup>
-import Comparar from './components/Comparar.vue'
 import navbar from './components/navbar.vue'
+import Comparar from './components/Comparar.vue'
 import Eliminar from './components/Eliminar.vue'
 import Añadir from './components/Añadir.vue'
 
@@ -9,12 +17,6 @@ let nav = false
 
 </script>
 
-<template >
-  
-<navbar @click_eliminar="callback" @click_añador="callback" @click_comparar="callback"  />
-
-  <Eliminar></Eliminar>
-</template>
 
 <style scoped>
 .logo {

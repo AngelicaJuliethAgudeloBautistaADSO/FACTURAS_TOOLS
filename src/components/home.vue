@@ -7,9 +7,9 @@ import Añadir from './components/Añadir.vue'
 
 <template>
     <navbar>
-        <Añadir></Añadir>
-        <Comparar></Comparar>
-        <Eliminar></Eliminar>
-        
+        <navbar @click_eliminar="callback" @click_añador="callback" @click_comparar="callback"/>
     </navbar>
 </template>
+<script>
+    
+</script>
