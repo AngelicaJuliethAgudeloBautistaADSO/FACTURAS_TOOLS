@@ -6,7 +6,7 @@
                 <li><a @click="$emit('click_añadir')">Añadir</a></li>
                 <li><a @click="$emit('click_comparar')">Comparar</a></li> -->
 
-                <button @click="$emit('click_eliminar')">Eliminar</button>
+                <button @click="$emit('eliminar')">Eliminar</button>
                 <button @click="$emit('click_añadir')">Añadir</button>
                 <button @click="$emit('click_comparar')">Añadir</button>
             </ul>
@@ -15,6 +15,6 @@
 </template>
 
 
-<script setup>
+<script setup >
 
 </script>
