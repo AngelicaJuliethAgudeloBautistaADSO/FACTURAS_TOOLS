@@ -1,13 +1,13 @@
 <template>
-    <div class="bg-gray-700 h-screen flex-col flex items-center gap-10">
-        <h2>Pasar Listado de Facturas Elimina la Letra</h2>
-        <input class="border-indigo-900" placeholder="Pega la lista de los numeros...." v-model="Listnumber">
+    <div class="bg-body h-screen flex-col flex items-center gap-10 font-sans">
+        <h2 class="mt-[60px] text-lg font-bold text-letras">Pasar Listado de Facturas Elimina la Letra</h2>
+        <input class="h-[200px] w-[80%] bg-input rounded-md " placeholder="Pega la lista de los numeros...." v-model="Listnumber">
 
-        <input class="border-sky-500" type="text" id="result" placeholder="Lista transformada...." v-model="ListResult">  
+        <input class="h-[200px] w-[80%] bg-input  rounded-md" type="text" id="result" placeholder="Lista transformada...." v-model="ListResult">  
 
-        <div class="button-container">
-            <button onclick="processInput()">Eliminar</button>
-            <button onclick="Limpiar()">Limpiar</button>
+        <div class="w-full flex justify-center gap-[50px]  mb-[20px]">
+            <button class="bg-button p-[10px] rounded-md text-letras" onclick="processInput()">Eliminar</button>
+            <button class="bg-button p-[10px] rounded-md text-letras" onclick="Limpiar()">Limpiar</button>
         </div>
     </div>
 </template>

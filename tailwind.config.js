@@ -8,7 +8,12 @@ export default {
     extend: {
       colors:{
         red:"#FF0000",
-        azul:"#FF0000"
+        azul:"#FF0000",
+        body:"#232020",
+        letras:"white",
+        input:"#353535",
+        button:"#1c1c1c",
+        navbar:"#464445"
       }
     },
   },
