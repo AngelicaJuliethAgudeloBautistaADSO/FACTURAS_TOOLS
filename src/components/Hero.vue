@@ -17,7 +17,6 @@ function mostrar_eliminar() {
   <div>
     <!-- Navbar con el evento "eliminar" -->
     <navbar @eliminar="mostrar_eliminar" />
-
     <!-- Mostrar el componente Eliminar condicionalmente -->
     <div v-if="mostrarEliminar">
       <Eliminar />
