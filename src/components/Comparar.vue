@@ -1,41 +1,23 @@
-<script setup>
-import { ref } from 'vue'
-defineProps({
-  msg: String,
-})
-
-
-
-const count = ref(0)
-
-    const Listnumber1 = defineModel('Listnumber1')
-    const Listnumber2 = defineModel('Listnumber2')
-    const ListResult = defineModel('ListResult')
-    console.log(Listnumber1);
-    console.log(Listnumber2);
-    console.log(ListResult);
-
-function processInputComparar() {
-  
-}
-
-</script>
-
 <template>
-  <div class="container">
-    <h2 class="h2">Pasar Listado de Facturas Comparar Numeros</h2>
-    <input class="InputR1"  placeholder="Pega la lista de los numeros...." v-model="Listnumber1">
-    <input class="InputR2"  placeholder="Pega la lista de los numeros...." v-model="Listnumber2">
-    <input class="InputR3" placeholder="Lista transformada...." v-model="ListResult">
-    <div class="button-container">
-        <button onclick="processInputComparar()">Comparar</button>
-        <button onclick="Limpiar()">Limpiar</button>
+  <div class="">
+
+    <h2 class="col-span-2 mt-5 text-lg font-bold md:mt-2 md:text-2xl">Pasar Listado de Facturas Comparar Números</h2>
+
+    <textarea class="bg-input " 
+    placeholder="Pega la lista de los números..." v-model="InputNumero1"></textarea>
+
+    <textarea class="bg-input" 
+    placeholder="Pega la lista de los números..." v-model="InputNumero2"></textarea>
+
+    <textarea class="bg-input" 
+    placeholder="Lista transformada..." v-model="Result"></textarea>
+
+    <div class="col-span-2 flex justify-center gap-4 h-[50px]">
+      <button class="bg-button text-letras" @click="processInputComparar()">Comparar</button>
+      <button class="bg-button text-letras" @click="Limpiar()">Limpiar</button>
     </div>
   </div>
 </template>
+<script setup>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+</script>
