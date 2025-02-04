@@ -39,7 +39,7 @@ function Limpiar() {
     InputNumeros.value="";
     InputLetras.value="";
     Result.value="";
-}   
+}   0
 </script>
 
 

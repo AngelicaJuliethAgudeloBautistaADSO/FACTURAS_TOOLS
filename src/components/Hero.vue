@@ -1,8 +1,5 @@
 <script setup>
-import navbar from "./navbar.vue";
-import Eliminar from './Eliminar.vue';
-import Añadir from "./Añadir.vue";
-import comparar from "./Comparar.vue";
+
 
 import { ref } from 'vue';
 
@@ -21,15 +18,6 @@ function ShowModal(modal) {
 
 <template>
   <div>
-    <navbar @navegacion="ShowModal"/>
-    <div v-show="MostrarEliminar">
-      <Eliminar />
-    </div>
-    <div v-show="MostrarAñadir">
-        <Añadir/>
-    </div>
-    <div v-show="MostrarComparar">
-        <comparar/>
-    </div>
+    <router-view></router-view>
   </div>
 </template>

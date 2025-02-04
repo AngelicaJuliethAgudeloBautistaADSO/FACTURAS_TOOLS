@@ -1,15 +1,11 @@
+<script setup>
+import navbar from "./components/navbar.vue";
+</script>
+
 <template>
-<Home></Home>
+    <navbar></navbar>
+    <router-view></router-view>
+    
 </template>
 
 
-<script setup>
-
-import Home from './components/Hero.vue'
-
-</script>
-
-
-<style scoped>
-
-</style>
