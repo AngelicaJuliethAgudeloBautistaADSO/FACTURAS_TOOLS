@@ -16,10 +16,9 @@
         <TextArea class="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]"
         placeholder="Pega la lista de los numeros...." v-model="InputNumeros"></TextArea>
 
-        <TextArea class="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]"
-         placeholder="Lista transforma  da...." v-model="Result"></TextArea>
+        <TextArea name="Lista transforma  da...." v-model="Result" customClass="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]" ></TextArea>
 
-        <Boton @click="processInput()">Eliminar</Boton>
+        <Boton @click="processInput()" label="Eliminar"/>
 
     </div>
 </template>

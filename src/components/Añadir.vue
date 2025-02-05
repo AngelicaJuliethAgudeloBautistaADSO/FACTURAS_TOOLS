@@ -16,11 +16,14 @@
             <button class="bg-button p-[10px] rounded-md md:w-xs" @click="processInputDispapeles()">Dispapeles</button>
             <button class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()">Limpiar</button>
         </div>
+        <Boton>Añadir</Boton>
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import TextArea from "./TextArea.vue";
+import Boton from "./Boton.vue";
 const InputNumeros = ref('');
 const InputLetras = ref('');
 const Result = ref('');
@@ -41,5 +44,3 @@ function Limpiar() {
     Result.value="";
 }   0
 </script>
-
-

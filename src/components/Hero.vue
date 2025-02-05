@@ -1,6 +1,4 @@
 <script setup>
-
-
 import { ref } from 'vue';
 
 // Variable para controlar la visualización del componente
