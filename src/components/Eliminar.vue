@@ -1,24 +1,16 @@
 <template>
     <div class="bg-body h-screen flex-col flex items-center gap-10 font-sans text-letras md:h-full">
+
         <h2 class="mt-[60px] text-lg font-bold md:mt-[20px] md:text-2xl">Pasar Listado de Facturas Elimina la Letra</h2>
-<!-- 
-        <textarea class="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]"
-         placeholder="Pega la lista de los numeros...." v-model="InputNumeros"></textarea>
 
-        <textarea class="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]"
-         placeholder="Lista transforma  da...." v-model="Result"></textarea>  
+        <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" customClass="h-[50%] w-[80%] p-[20px] md:h-[33vh] md:w-[85%] md:p-[40px]"/>
 
-        <div class="w-full flex justify-center gap-[50px] mb-[20px] md:mb-[63px] md:h-[47px] " >
-            <button class="bg-button p-[10px] rounded-md md:w-xs" @click="processInput()">Eliminar</button>
-            <button class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()">Limpiar</button>
-        </div> -->
+        <TextArea name="Lista transforma  da...." v-model="Result" customClass="h-[50%] w-[80%] p-[20px] md:h-[33vh] md:w-[85%] md:p-[40px]"/>
 
-        <TextArea class="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]"
-        placeholder="Pega la lista de los numeros...." v-model="InputNumeros"></TextArea>
-
-        <TextArea name="Lista transforma  da...." v-model="Result" customClass="h-[200px] w-[80%] p-[20px] bg-input rounded-md md:h-[300px] md:w-[50%] md:p-[40px]" ></TextArea>
-
-        <Boton @click="processInput()" label="Eliminar"/>
+        <div class="w-full flex justify-center gap-[50px] mb-[20px] md:mb-[34px] md:h-[47px] " >
+            <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="processInput()" label="Eliminar"/>
+            <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()" label="Limpiar"/>
+        </div>
 
     </div>
 </template>
