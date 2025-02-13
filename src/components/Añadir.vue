@@ -4,7 +4,7 @@
 
         <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" customClass="h-[50%] w-[80%] p-[20px] md:h-[27vh] md:w-[85%] md:p-[40px]"/>
 
-        <TextArea name="Ingresa la letra que quieres agregar...." v-model="InputLetras" customClass="h-[50%] w-[80%] p-[20px] md:h-[9vh] md:w-[85%] md:p-[10px]"/>
+        <TextArea name="Ingresa la letra que quieres agregar...." v-model="InputLetras" @keydown.enter="processInputDispapeles" customClass="h-[50%] w-[80%] p-[20px] md:h-[9vh] md:w-[85%] md:p-[10px]"/>
         
         <TextArea name="Lista transformada...." v-model="Result" customClass="h-[50%] w-[80%] p-[20px] md:h-[27vh] md:w-[85%] md:p-[40px]"/>
 
@@ -12,6 +12,7 @@
             <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="processInputLetras()" label="Añadir"/>
             <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="processInputDispapeles()" label="Dispapeles"/>
             <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()" label="Limpiar"/>
+            <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Copiar()" label="Copiar"/>
         </div>
     </div>
 </template>

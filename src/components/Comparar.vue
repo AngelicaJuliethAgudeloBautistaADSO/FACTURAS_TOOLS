@@ -3,15 +3,16 @@
 
     <h2 class="col-span-2 mt-5 text-lg font-bold md:mt-2 md:text-2xl">Pasar Listado de Facturas Comparar Números</h2>
 
-    <TextArea class="col-span-1 w-[80%] h-[33vh] md:mt-[25px] p-[40px]" placeholder="Pega la lista de los números..." v-model="InputNumero1"/>
+    <TextArea class="col-span-1 w-[80%] h-[33vh] md:mt-[25px] p-[40px]" placeholder="Pega la lista de los números..." v-model="InputNumero1" @keydown.enter="processInputComparar"/>
 
-    <TextArea class="col-span-1 w-[80%] h-[33vh] md:mt-[25px] p-[40px]" placeholder="Pega la lista de los números..." v-model="InputNumero2"/>
+    <TextArea class="col-span-1 w-[80%] h-[33vh] md:mt-[25px] p-[40px]" placeholder="Pega la lista de los números..." v-model="InputNumero2" @keydown.enter="processInputComparar"/>
 
     <TextArea class="col-span-2 w-[90%] h-[33vh] md:mt-[25px] p-[40px]" placeholder="Lista transformada..." v-model="Result"/>
 
     <div class="col-span-2  w-full flex justify-center gap-[20px] mb-[10px] md:gap-[50px] md:mt-[25px] md:h-[47px] ">
       <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="processInputComparar()" label="Comparar"/>
       <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()" label="Limpiar"/>
+      <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Copiar()" label="Copiar"/>
     </div>
   </div>
 </template>

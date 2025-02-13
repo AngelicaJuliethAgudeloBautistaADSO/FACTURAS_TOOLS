@@ -3,13 +3,14 @@
 
         <h2 class="mt-[60px] text-lg font-bold md:mt-[20px] md:text-2xl">Pasar Listado de Facturas Elimina la Letra</h2>
 
-        <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" customClass="h-[50%] w-[80%] p-[20px] md:h-[33vh] md:w-[85%] md:p-[40px]"/>
+        <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" @keydown.enter="processInput" customClass="h-[50%] w-[80%] p-[20px] md:h-[33vh] md:w-[85%] md:p-[40px]"/>
 
         <TextArea name="Lista transforma  da...." v-model="Result" customClass="h-[50%] w-[80%] p-[20px] md:h-[33vh] md:w-[85%] md:p-[40px]"/>
 
         <div class="w-full flex justify-center gap-[50px] mb-[20px] md:mb-[34px] md:h-[47px] " >
             <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="processInput()" label="Eliminar"/>
             <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Limpiar()" label="Limpiar"/>
+            <Boton class="bg-button p-[10px] rounded-md md:w-xs" @click="Copiar()" label="Copiar"/>
         </div>
 
     </div>
@@ -26,7 +27,7 @@
         console.log(InputNumeros.value);
         const ExpresionRegular = /\d+/g;
         const numeros = InputNumeros.value.match(ExpresionRegular);
-        Result.value = numeros ? `'${numeros.join("',    '")}'` : '';
+        Result.value = numeros ? `'${numeros.join("' , '")}'` : '';
         console.log(Result.value);
         
     }
@@ -34,5 +35,10 @@
         InputNumeros.value="";
         Result.value="";
     }
+    function Copiar() {
+        navigator.clipboard.writeText(Result.value);
+    }
+
 
 </script>
+
