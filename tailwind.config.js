@@ -13,7 +13,8 @@ export default {
         letras:"white",
         input:"#353535",
         button:"#1c1c1c",
-        navbar:"#464445"
+        navbar:"#464445",
+        buttonhover:"#c23030"
       }
     },
   },

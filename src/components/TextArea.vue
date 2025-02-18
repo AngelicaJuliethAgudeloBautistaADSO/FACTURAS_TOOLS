@@ -21,6 +21,3 @@
     }
     });
   </script>
-
-  
-<!-- @keydown.enter="$emit('enter')" -->
