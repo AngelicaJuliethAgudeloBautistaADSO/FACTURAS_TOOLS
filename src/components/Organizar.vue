@@ -1,6 +1,6 @@
 <template>
     <div class="bg-body">
-        <div class=" h-screen flex-col flex items-center gap-8 font-sans text-letras md:h-full min-h-screen">
+        <div class="h-[92.6vh] flex-col flex items-center gap-8 font-sans text-letras">
             <h2 class="mt-[60px] text-lg font-bold md:mt-[22px] md:text-2xl">Pasar Listado de Facturas Organizar</h2>
 
             <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" 
