@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-body">
-        <div class="h-[92.6vh] flex-col flex items-center gap-8 font-sans text-letras">
-            <h2 class="mt-[60px] text-lg font-bold md:mt-[22px] md:text-2xl">Pasar Listado de Facturas Organizar</h2>
+    <div class="bg-body min-h-screen flex flex-col">
+        <div class="flex flex-col items-center gap-8 font-sans text-letras flex-grow">
+            <h2 class="mt-[60px] text-lg font-bold md:mt-[40px] md:text-2xl">Pasar Listado de Facturas Organizar</h2>
 
             <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" 
             @keydown.enter="processInputOrganizar" customClass="h-[40%] w-[80%] p-[20px] md:h-[33vh] md:w-[75%] md:p-[40px]"/>
@@ -19,7 +19,6 @@
             </div>
         </div>
     </div>
-    
 </template>
 
 <script setup>
@@ -30,19 +29,12 @@
     const Result = ref('');
 
     function processInputOrganizar() {
-    Result.value = InputNumeros.value
-        .split(/\r?\n/)
-        .map(line => line.trim())
-        .filter(Boolean)
-        .map(line => `'${line}'`)
-        .join(', ');
+        Result.value = InputNumeros.value.match(/\d+/g).map(num => `'${num}'`).join(', ');
     }
-
     function Limpiar(){
         InputNumeros.value="";
         Result.value="";
     }
-
     function Copiar() {
         navigator.clipboard.writeText(Result.value);
     }

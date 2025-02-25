@@ -14,7 +14,8 @@ export default {
         input:"#353535",
         button:"#1c1c1c",
         navbar:"#464445",
-        buttonhover:"#c23030"
+        buttonhover:"#c23030",
+        buttonnavbar:"#4a4848"
       }
     },
   },

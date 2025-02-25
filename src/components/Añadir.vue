@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-body">
-        <div class="h-[92.6vh] flex-col flex items-center gap-5 font-sans text-letras">
-            <h2 class="mt-[60px] text-lg font-bold md:mt-[20px] md:text-2xl">Pasar Listado de Facturas Añade la Letra</h2>
+    <div class="bg-body min-h-screen flex flex-col">
+        <div class="flex flex-col items-center gap-5 font-sans text-letras">
+            <h2 class="mt-[60px] text-lg font-bold md:mt-[40px] md:mb-[10px] md:text-2xl">Pasar Listado de Facturas Añade la Letra</h2>
 
             <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" 
             customClass="h-[50%] w-[85%] p-[20px] md:h-[28vh] md:w-[75%] md:p-[40px]"/>
@@ -14,7 +14,7 @@
             </div>
 
             <TextArea name="Lista transformada...." v-model="Result" 
-            customClass="h-[50%] w-[80%] p-[20px] md:h-[27vh] md:w-[75%] md:p-[40px]" disabled/>
+            customClass="h-[50%] w-[80%] p-[20px] md:h-[26vh] md:w-[75%] md:p-[40px]" disabled/>
 
             <div class="w-full flex justify-center gap-[50px] mb-[25px] md:mb-[40px] md:h-[47px]" >
                 <Boton @click="processInputLetras()" label="Añadir"/>
@@ -37,14 +37,15 @@
 
     function processInputLetras() {
         const ExpresionRegular = /\d+/g;
-        const letra = InputLetras.value.trim().replace(/\s+/g, '');
-        const resultado = InputNumeros.value.replace(ExpresionRegular, (numero) => `${letra.toUpperCase()}${numero}`);
+        const letra = InputLetras.value.trim().replace(/\s+/g, '').toUpperCase();
+        const numeros = InputNumeros.value.match(ExpresionRegular);
+        const resultado = numeros.map(numero => `${letra}${numero}`).join('\n');
         Result.value = resultado;
     }
     function processInputDispapeles() {
         const ExpresionRegular = /\d+/g;
-        const letra = InputLetras.value.trim().replace(/\s+/g, '');
-        const resultado = InputNumeros.value.match(ExpresionRegular)?.map(numero => `'${letra.toUpperCase()}${numero}'`).join(', ');
+        const letra = InputLetras.value.trim().replace(/\s+/g, '').toUpperCase();
+        const resultado = InputNumeros.value.match(ExpresionRegular)?.map(numero => `${letra}${numero}`).join(',');
         Result.value = resultado;
     }
     function Limpiar() {

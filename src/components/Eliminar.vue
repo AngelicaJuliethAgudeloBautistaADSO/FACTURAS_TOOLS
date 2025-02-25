@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-body">
-        <div class="h-[92.6vh] flex-col flex items-center gap-8 font-sans text-letras">
+    <div class="bg-body min-h-screen flex flex-col">
+        <div class="flex flex-col items-center gap-8 font-sans text-letras">
 
-            <h2 class="mt-[60px] text-lg font-bold md:mt-[22px] md:text-2xl">Pasar Listado de Facturas Elimina la Letra</h2>
+            <h2 class="mt-[60px] text-lg font-bold md:mt-[40px] md:text-2xl">Pasar Listado de Facturas Elimina la Letra</h2>
 
             <TextArea name="Pega la lista de los numeros...." v-model="InputNumeros" 
             @keydown.enter="processInput" customClass="h-[40%] w-[80%] p-[20px] md:h-[33vh] md:w-[75%] md:p-[40px]"/>
